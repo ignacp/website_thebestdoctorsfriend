@@ -1,0 +1,46 @@
+<div class="container">
+
+        <div class="row">
+            <div class="col-xs-12">
+               <h3>Patient Details</h3>
+               <hr>
+            </div>
+        </div>
+
+        <div class="row row-content">
+            <div class="col-xs-12" ng-if="!showPatient">
+                <h3>{{message}}</h3>
+            </div>
+            <div class="col-xs-12" ng-if="showPatient">
+
+                <button class="btn btn-xs btn-primary pull-right"
+                    type="button" ui-sref="app.patientslist">
+                    Back to Patients List
+                </button>
+
+                <button class="btn btn-xs btn-primary"
+                    type="button" ui-sref="app.patientslist" ng-click="deletePatient(patient._id)">
+                    Delete Patient
+                </button>
+                
+                <div class="col-xs-6">                 
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">{{patient.firstName}} {{patient.lastName}}</h3>
+                    </div>
+                    
+                    <div class="panel-body">
+                        <h4>Age: {{patient.age}}</h4>
+                        <h4>Gender: {{patient.gender}}</h4>
+                        <h4>Number: {{patient.phoneNumber}}</h4>
+                        <h4>Email: {{patient.email}}</h4>
+                        <h4>History: {{patient.medicalHistory}}</h4>
+                        <h4>Treatment: {{patient.medicalTreatment}}</h4>
+                        <h4>Appointment: {{patient.nextAppointment | date:'MMMM dd, yyyy'}}</h4>                
+                    </div>
+                </div>
+                </div> 
+                <div class="col-xs-6"></div>                
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,71 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>                
+            </div>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+
+                        <li><a ui-sref="app"><span class="glyphicon glyphicon-home" 
+                         aria-hidden="true"></span> Home</a></li>
+
+                        <li><a ui-sref="app.aboutus"><span class="glyphicon glyphicon-info-sign"
+                         aria-hidden="true"></span> About Us</a></li>
+
+                        <li><a ui-sref="app.patientslist"><span class="fa fa-list"
+                         aria-hidden="true"></span> Patients list</a></li>
+                        
+                        <li><a ui-sref="app.addpatients"><span class="fa fa-plus-circle"
+                         aria-hidden="true"></span> Add patients</a></li>
+
+                        <li><a ui-sref="app.contactus">
+                        <i class="fa fa-envelope-o"></i> Contact Us</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li ng-if="!loggedIn"><a ng-click="openLogin()">
+                        <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                        </li>
+                        <li ng-if="loggedIn">
+                        <a>{{username}}</a>
+                        </li>
+                        <li ng-if="loggedIn">
+                        <a ng-click="logOut()">
+                        <span class="glyphicon glyphicon-log-in"></span> Logout</a>
+                        </li>
+                    </ul>
+
+                </div>               
+
+            </div>
+        </nav>
+
+
+	<div class="jumbotron">
+      	<div class="container">
+
+	        <div class="row row-jumbotron">
+	            <div class="col-xs-12 col-sm-10 col-sm-offset-2 ">
+	                <h1>The best doctor's friend</h1>
+	            </div>
+
+	            <div class="col-xs-12 col-sm-4">
+	            	<p style="padding:20px;"></p>
+	                <img src="images/logo.png" class="img-responsive">
+	            </div>  
+
+	            <div class="col-xs-12 col-sm-8">
+	            	<p style="padding:20px;"></p>
+	                <p>A doctor has many patients and each patient has a different medical history with your respective medical treatment. The website and the mobile application provide an user interface that makes easier the management of patient information.</p>
+	            </div>
+
+	        </div>
+    	</div>
+ 	</div>
